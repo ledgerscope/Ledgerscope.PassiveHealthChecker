@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36212.18 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ledgerscope.PassiveHealthChecker", "PassiveHealthChecker\Ledgerscope.PassiveHealthChecker.csproj", "{0A81C4EF-DC30-45FD-BF30-E4BC1802CFDD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ledgerscope.PassiveHealthChecker.Sample", "Ledgerscope.PassiveHealthChecker.Sample\Ledgerscope.PassiveHealthChecker.Sample.csproj", "{322889AD-6D1A-4B23-8AA7-26BF88F24F77}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0A81C4EF-DC30-45FD-BF30-E4BC1802CFDD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A81C4EF-DC30-45FD-BF30-E4BC1802CFDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A81C4EF-DC30-45FD-BF30-E4BC1802CFDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A81C4EF-DC30-45FD-BF30-E4BC1802CFDD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{322889AD-6D1A-4B23-8AA7-26BF88F24F77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{322889AD-6D1A-4B23-8AA7-26BF88F24F77}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{322889AD-6D1A-4B23-8AA7-26BF88F24F77}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{322889AD-6D1A-4B23-8AA7-26BF88F24F77}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BCE247D0-B2BC-4D1C-BE46-F62A706D723F}
+	EndGlobalSection
+EndGlobal

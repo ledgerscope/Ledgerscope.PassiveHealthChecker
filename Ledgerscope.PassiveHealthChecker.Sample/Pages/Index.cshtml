@@ -1,0 +1,15 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <form method="POST">
+        <h1 class="display-4">Make a request</h1>
+        <textarea asp-for="RequestText" class="form-control" id="requestText" rows="3" placeholder="Enter your request here..."></textarea>
+        <button class="btn btn-primary mt-3" id="sendRequestButton">Send Request</button>
+    </form>
+</div>
+
+<a href="/Health" target="_blank">View Health Checks</a>
