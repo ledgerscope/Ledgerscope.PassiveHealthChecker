@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ledgerscope.PassiveHealthCh
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ledgerscope.PassiveHealthChecker.Sample", "Ledgerscope.PassiveHealthChecker.Sample\Ledgerscope.PassiveHealthChecker.Sample.csproj", "{322889AD-6D1A-4B23-8AA7-26BF88F24F77}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ledgerscope.PassiveHealthChecker.Tests", "Ledgerscope.PassiveHealthChecker.Tests\Ledgerscope.PassiveHealthChecker.Tests.csproj", "{E8B9C2F1-5D21-4B6A-8E8E-1CFA6D7B60E1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{322889AD-6D1A-4B23-8AA7-26BF88F24F77}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{322889AD-6D1A-4B23-8AA7-26BF88F24F77}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{322889AD-6D1A-4B23-8AA7-26BF88F24F77}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E8B9C2F1-5D21-4B6A-8E8E-1CFA6D7B60E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8B9C2F1-5D21-4B6A-8E8E-1CFA6D7B60E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8B9C2F1-5D21-4B6A-8E8E-1CFA6D7B60E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8B9C2F1-5D21-4B6A-8E8E-1CFA6D7B60E1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

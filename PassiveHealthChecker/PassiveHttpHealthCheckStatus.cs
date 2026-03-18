@@ -8,24 +8,41 @@ namespace Ledgerscope.PassiveHealthChecker
     /// </summary>
     public class PassiveHttpHealthCheckStatus
     {
+        private readonly ConcurrentDictionary<HttpStatusCode, DateTime> _lastSeenByStatusCode = [];
+
         public required string Host { get; init; }
-        public DateTime LastSuccess { get; private set; }
-        public DateTime LastFailure { get; private set; }
+        public DateTime? LastSuccess { get; private set; }
+        public DateTime? LastFailure { get; private set; }
+        public IReadOnlyDictionary<HttpStatusCode, DateTime> LastSeenByStatusCode => _lastSeenByStatusCode;
 
         public ConcurrentDictionary<DateTime, HttpStatusCode> RequestHistory = [];
 
         public void AddResponse(HttpStatusCode statusCode)
         {
-            if (statusCode >= HttpStatusCode.OK && statusCode <= (HttpStatusCode)299)
+            var timestamp = DateTime.UtcNow;
+
+            _lastSeenByStatusCode[statusCode] = timestamp;
+
+            switch ((int)statusCode / 100)
             {
-                LastSuccess = DateTime.UtcNow;
-            }
-            else
-            {
-                LastFailure = DateTime.UtcNow;
+                case 2:
+                    LastSuccess = timestamp;
+                    break;
+                case 3: //HttpClient follows redirects automatically so if a 3xx gets logged it's most likely a problem
+                    LastFailure = timestamp;
+                    break;
+                case 4:
+                    LastFailure = timestamp;
+                    break;
+                case 5:
+                    LastFailure = timestamp;
+                    break;
+                default:
+                    LastFailure = timestamp;
+                    break;
             }
 
-            RequestHistory[DateTime.UtcNow] = statusCode;
+            RequestHistory[timestamp] = statusCode;
         }
 
         private const int MinHistorySize = 100; // Make sure we've always got some history

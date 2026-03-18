@@ -22,6 +22,7 @@ The solution contains two projects:
 ## Features
 
 - Automatic tracking of HTTP request success/failure rates by host
+- Latest-response timestamps for each HTTP status code observed
 - Configurable health check thresholds
 - Integration with ASP.NET Core's health checks system
 - Minimal memory footprint with automatic pruning of old request data
