@@ -1,5 +1,4 @@
 using Microsoft.Extensions.Diagnostics.HealthChecks;
-using Microsoft.Extensions.Http;
 using System.Text;
 using System.Text.Json;
 
@@ -13,18 +12,7 @@ namespace Ledgerscope.PassiveHealthChecker.Sample
 
             // Add services to the container.
             builder.Services.AddRazorPages();
-
-            builder.Services.AddSingleton<PassiveHttpHealthCheckStatuses>();
-
-            builder.Services.AddHealthChecks()
-                .AddCheck<PassiveHttpHealthCheckHealthCheck>("Passive Http Health Check");
-
-            // Register the handler
-            builder.Services.AddTransient<PassiveHttpHealthCheckHandler>();
-
-            builder.Services.AddHttpClient();
-
-            builder.Services.AddTransient<IHttpMessageHandlerBuilderFilter, GlobalHttpMessageHandlerBuilderFilter>();
+            builder.Services.ConfigurePassiveHealthChecker();
 
             var app = builder.Build();
 

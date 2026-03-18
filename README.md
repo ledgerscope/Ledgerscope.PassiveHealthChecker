@@ -47,14 +47,7 @@ The solution contains two projects:
 Add the following to your Program.cs or Startup.cs:
 
 ```csharp
-// Register the passive health check services
-builder.Services.AddSingleton<PassiveHttpHealthCheckStatuses>();
-builder.Services.AddTransient<PassiveHttpHealthCheckHandler>();
-builder.Services.AddTransient<IHttpMessageHandlerBuilderFilter, GlobalHttpMessageHandlerBuilderFilter>();
-
-// Add the health check
-builder.Services.AddHealthChecks()
-    .AddCheck<PassiveHttpHealthCheckHealthCheck>("Passive Http Health Check");
+builder.Services.ConfigurePassiveHealthChecker();
 
 // Configure health check endpoint
 app.UseHealthChecks("/health");
