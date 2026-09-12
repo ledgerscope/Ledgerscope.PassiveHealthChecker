@@ -59,6 +59,14 @@ namespace Ledgerscope.PassiveHealthChecker
             }
         }
 
+        /// <summary>
+        /// Gets the percentage of successful HTTP responses in the recent request history.
+        /// </summary>
+        /// <remarks>
+        /// If there are no recorded requests in <see cref="RequestHistory"/>, this property returns 100.
+        /// This reflects the assumption that, for passive health checks, the absence of requests indicates
+        /// no observed failures rather than an unhealthy state.
+        /// </remarks>
         public int SuccessPercentage
         {
             get
