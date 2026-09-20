@@ -7,6 +7,6 @@
     <PackageVersion Include="Microsoft.Extensions.Diagnostics.HealthChecks" Version="10.0.12" />
     <PackageVersion Include="Microsoft.Extensions.Diagnostics.HealthChecks.Abstractions" Version="10.0.12" />
     <PackageVersion Include="Microsoft.Extensions.Http" Version="10.0.12" />
-    <PackageVersion Include="MSTest" Version="4.4.0" />
+    <PackageVersion Include="MSTest" Version="4.4.1" />
   </ItemGroup>
 </Project>
